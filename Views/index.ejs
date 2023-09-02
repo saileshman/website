@@ -1,20 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Document</title>
 </head>
 <body>
-   <div id="he">
+      
       <h1>hello this is website</h1>
-  </div>
-  <form action="/action_page.php">
-      <label for="fname">First name:</label>
+      <div>
+      <label for="fname">your url:</label>
+      <input type="text" name="qrurl"  id="qrurl"><br><br>
+      <button type="submit" onclick="fetchURL(); return false";  > Generateqr </button>
+      </div>
+    <img src="" alt="" id="qrimg">
+
+    <div>
       <input type="text" id="fname" name="fname"><br><br>
-      <label for="lname">Last name:</label>
-      <input type="text" id="lname" name="lname"><br><br>
-      <input type="submit" value="Submit">
-    </form> 
+      <button type="submit" >Submit-to-email</button>
+    </div> 
+     
 </body>
+<script>
+    async function fetchURL(){
+       const qrurl = document.getElementById("qrurl").value;
+       await Generateqr(qrurl)
+   }
+
+   async function Generateqr(qrurl){
+    try{
+        
+    }catch(e){
+        next(e)
+    }
+
+   }
+</script>
+
 </html>
